@@ -5,25 +5,18 @@
 { inputs, config, lib, pkgs, ... }:
 
 {
-  # Import Home-Manager
-  imports = [
-    inputs.home-manager.nixosModules.home-manager
-  ];
+  # Enable Home Manager
+  programs.home-manager.enable = true;
 
-  # Configure Home Manager
-  home-manager = {
-    extraSpecialArgs = {
-      inherit inputs;
-    };
-    users = {
-      "saik" = {
-        imports = [
-          ../home.nix
-        ];
-      };
-    };
+  # Configure user basics
+  home.username = "saik";
+  home.homeDirectory = "/home/saik";
+
+  # Add Session Variables
+  home.sessionVariables = {
+    EDITOR = "nvim";
   };
-  
+
   # Create the user
   users.users.saik = {
     isNormalUser = true;
