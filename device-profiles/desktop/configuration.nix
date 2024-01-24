@@ -8,21 +8,21 @@
   # Add your users, packages, modules, etc here.
   imports = [
     # Modules
-    ../../modules/audio.nix
-    ../../modules/networking.nix
-    ../../modules/bluetooth.nix
-    ../../modules/printing.nix
-    ../../modules/hyprland.nix
     ../../modules/asus.nix
+    ../../modules/audio.nix
+    ../../modules/bluetooth.nix
+    ../../modules/cups.nix
+    ../../modules/hyprland.nix
+    ../../modules/networking.nix
 
     # Packages
-    ../../packages/kitty.nix
+    #../../packages/kitty.nix
     ../../packages/neovim
-    ../../packages/steam.nix
-    ../../packages/office.nix
-    ../../packages/terminal-extras.nix
-    ../../packages/development.nix
-    ../../packages/docker.nix
+    #../../packages/steam.nix
+    #../../packages/office.nix
+    #../../packages/terminal-extras.nix
+    #../../packages/development.nix
+    #../../packages/docker.nix
   ];
 
   # Enable Flakes.
